@@ -1,4 +1,4 @@
-##Common terms:
+##Common terms:##
 
 - **Image** is defined as a two-dimensional functin f(x,y) where x and y are spatial (plane) coordinates and the amplitude of f at any pair of coordinates (x,y) is called the 
 intensity/gray level of the image at that point. 
@@ -36,7 +36,7 @@ or the number of bits used for each color component of a single pixel.
 - **Mask/kernel/template/window** is a 2D matrix whose values define the nature of process.
 
 
-##Types of noise
+##Types of noise##
 **1. Aliasing**
 
 Occurs when reconstructed image varies from the original image if sampling theorem is not satisfied. Types are spatial and temporal.
@@ -60,7 +60,7 @@ Picture example for aliasing: https://en.wikipedia.org/wiki/Aliasing
 
 To eliminate spatial filtering: Use a low pass filter so that sampling theorem is satisfied, blending
 
-##Image Enhancements
+##Image Enhancements##
 Enhancements can be in spatial domain (where we directly manipulate the pixel values) or in the frequency domain (modification of its FT).
 
 
