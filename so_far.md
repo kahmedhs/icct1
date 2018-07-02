@@ -1,3 +1,35 @@
+#***Image Classification Tool***#
+
+
+##Types of Noise classes identified till date
+
+1. Aliasing
+
+	a. Spatial Aliasing
+
+	b. Temporal Aliasing
+
+2. White Noise
+
+3. Gaussian Noise
+
+4. Rayleigh Noise
+
+5. Gamma Noise
+
+6. Exponential Noise
+
+7. Uniform Noise
+
+8. Impulse Noise (Salt & Pepper Noise)
+
+9. Periodic Noise
+
+10. Poisson Noise
+
+11. Speckle Noise
+
+
 ## Common terms: ##
 
 - **Image** is defined as a two-dimensional functin f(x,y) where x and y are spatial (plane) coordinates and the amplitude of f at any pair of coordinates (x,y) is called the 
@@ -141,7 +173,7 @@ Types of noise depending on models
 
 - White noise: Has equal intensity at all at different frequencies.
 
-- Gaussian noise
+- Gaussian noise (convolution filtering, low pass filter, median filter )
 
 - Rayleigh noise
 
@@ -151,7 +183,7 @@ Types of noise depending on models
 
 - Uniform noise
 
-- Impulse (salt & pepper) noise
+- Impulse (salt & pepper) noise (mean filter, min filter, max filter, median filter is the best)
 
 - Periodic noise
 
@@ -186,3 +218,47 @@ Few filter types in frequency domain:
 - Notch filter
 
 - Weiner filter: very nice as long as an estimate of degradation function is known
+
+- Constrained least squares filtering
+
+###Additional notes###
+
+- Poisson noise: Light bulb example. Also called as shot noise. Wiener filter better than mean and median.
+
+- Speckle noise: Multiplicative in nature. adaptive and non adaptive filters to reduce. Adaptive median filter is good. 
+
+- Basically, there are 2 types of filters: Linear and non-linear. Median filter is a non linear filter. Linear filter involved convolving with a low pass filter or a smoothing function. In cases where the input data contains a large amount of noise but the magnitude is low, a linear low-pass filter may suffice. Conversely, if an image contains a low amount of noise but with relatively high magnitude, then a median[non-linear] filter may be more appropriate.
+
+###References###
+
+https://classes.soe.ucsc.edu/cmpe264/Fall06/lec4.pdf
+
+https://en.wikipedia.org/wiki/Image_noise
+
+https://en.wikipedia.org/wiki/Noise_reduction
+
+https://en.wikipedia.org/wiki/Deep_Image_Prior
+
+http://ijates.com/images/short_pdf/1420630126_P102-115.pdf
+
+http://www.rroij.com/open-access/a-comparative-study-of-image-denoisingtechniques.pdf
+
+http://ijarece.org/wp-content/uploads/2015/02/IJARECE-VOL-4-ISSUE-2-226-230.pdf
+
+https://www.sciencedirect.com/science/article/pii/S1665642317300925 
+
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.100.81&rep=rep1&type=pdf 
+
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.206.3947&rep=rep1&type=pdf
+
+https://arxiv.org/ftp/arxiv/papers/1505/1505.03489.pdf
+
+https://arxiv.org/pdf/1804.02603.pdf
+
+Exhaustive list of filters: https://www.cse.unr.edu/~fredh/papers/conf/034-asoidt/paper.pdf
+
+Digital Image Processing 2nd Edition by Gonzalez, Woods
+
+
+
+
