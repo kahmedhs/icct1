@@ -1,4 +1,4 @@
-##Common terms:##
+## Common terms: ##
 
 - **Image** is defined as a two-dimensional functin f(x,y) where x and y are spatial (plane) coordinates and the amplitude of f at any pair of coordinates (x,y) is called the 
 intensity/gray level of the image at that point. 
@@ -33,10 +33,19 @@ or the number of bits used for each color component of a single pixel.
 
 - **Fourier transform** is the frequency domain representation of signals. Any arbitrary signal can be expressed as a sum of sinusoids. 
 
+- **Mask/kernel/template/window** is a 2D matrix whose values define the nature of process of image transformation.
+
+- **Fourier transform** is the frequency domain representation of signals. Any arbitrary signal can be expressed as a sum of sinusoids. 
 - **Mask/kernel/template/window** is a 2D matrix whose values define the nature of process.
 
+- **Radiance** is the total amount of energy that flows from the light source.
 
-##Types of noise##
+- **Luminance**  is the measure of the amount of energy an observer perceives from a light source. 
+
+
+
+## Types of noise ##
+
 **1. Aliasing**
 
 Occurs when reconstructed image varies from the original image if sampling theorem is not satisfied. Types are spatial and temporal.
@@ -60,18 +69,47 @@ Picture example for aliasing: https://en.wikipedia.org/wiki/Aliasing
 
 To eliminate spatial filtering: Use a low pass filter so that sampling theorem is satisfied, blending
 
-##Image Enhancements##
+## Image Enhancements ##
+
 Enhancements can be in spatial domain (where we directly manipulate the pixel values) or in the frequency domain (modification of its FT).
 
 
-Basic grey level transformations:
+A. Basic grey level transformations:
 
 1.	Image Negatives: Used when we want to enhance white/gray detail in an image which is predominantly dark
-2.	Log transformations: 
-Mainly used to compress the dynamic range of images with large variations in pixel values. It expands the values of dark pixels in an image while compressing the higher level values. 
+2.	Log transformations: Mainly used to compress the dynamic range of images with large variations in pixel values. It expands the values of dark pixels in an image while compressing the higher level values. 
 3.	Gamma correction [Power function]
 4.	Piece-wise linear transformation functions.
-    * Contrast stretching [Thresholding]
-    * Gray-level slicing [Give high value of gray level to region of interest. You may/may not background]
-    * Bit-plane slicing [Separating the contribution to the total image by specific bits]
+
+    a.	Contrast stretching [Thresholding]
+
+    b.	Gray-level slicing [Give high value of gray level to region of interest. You may/may not background]
+
+    c.	Bit-plane slicing [Separating the contribution to the total image by specific bits]
+
+B. Histogram processing
+
+1. Histogram equalization
+
+2. Histogram matching
+
+C. Local enhancement: Same as above two but on a local pixel to pixel window basis. [Grey squares example]
+
+D. Arithmetic/Logic operators [AND/OR are used for masking, subtraction for masking, averaging for Gaussian noise reduction]
+
+E. Spatial Filtering
+
+   1. Smoothening filters
+  
+    a. [average filter]
+
+    b. Order statistics filter [Median filters, best for salt and pepper noise]
+
+   2. Sharpening filters 
+
+    a. [Laplacian transform, 2nd order derivative, highlights fine details]
+
+    b. Unsharp masking and high boost filtering. 
+
+    c. Gradient [sobel masks]
 
