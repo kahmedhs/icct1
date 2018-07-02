@@ -73,6 +73,8 @@ To eliminate spatial filtering: Use a low pass filter so that sampling theorem i
 
 Enhancements can be in spatial domain (where we directly manipulate the pixel values) or in the frequency domain (modification of its FT).
 
+###Enhancements in the spatial domain###
+
 
 A. Basic grey level transformations:
 
@@ -113,3 +115,74 @@ E. Spatial Filtering
 
     c. Gradient [sobel masks]
 
+###Enhancements in the frequency domain###
+
+- Fourier transform. Expressing an analog signal as a sum of sins and cosine waves.
+
+- Sine frequency is related to rate of change [intensities]
+
+- Notch filter: Forces the average value of image to 0.
+ 
+- Convolution concept. 
+
+- Ideal low pass filter has ringing problems
+
+- Butterworth filter: depends on the order
+ 
+- Gaussian low pass filter
+
+- Same as above three categories for high pass
+
+- Homomorphic filtering [used to remove multiplicative noise, used for correcting non-uniform illuminated images]
+
+##Image enhancements##
+
+Types of noise depending on models
+
+- White noise: Has equal intensity at all at different frequencies.
+
+- Gaussian noise
+
+- Rayleigh noise
+
+- Gamma noise
+
+- Exponential noise
+
+- Uniform noise
+
+- Impulse (salt & pepper) noise
+
+- Periodic noise
+
+Few filter types in spatial domain:
+
+- Arithmetic mean filter: noise reduced as a result of blurring.
+
+- Geometric mean filter: smoothing but image details are lost
+
+- Harmonic mean filter: good for salt noise, bad for pepper noise
+
+- Contraharmonic filter: good for salt and pepper
+
+- Median filter
+
+- Max and min filter (max good for pepper noise, min makes white objects smaller and dark objects bigger)
+
+- Midpoint filter
+
+- Alpha trimmed mean filter: good for combination of salt and pepper and gaussian noise
+
+- Adaptive local noise reduction filter
+
+- Adaptive median filter
+
+Few filter types in frequency domain:
+
+- Band reject filter: better for additive periodic noise
+
+- Band pass filter: helps in isolating the noise pattern
+
+- Notch filter
+
+- Weiner filter: very nice as long as an estimate of degradation function is known
