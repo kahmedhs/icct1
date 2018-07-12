@@ -238,6 +238,9 @@ Few filter types in frequency domain:
 
 - Basically, there are 2 types of filters: Linear and non-linear. Median filter is a non linear filter. Linear filter involved convolving with a low pass filter or a smoothing function. In cases where the input data contains a large amount of noise but the magnitude is low, a linear low-pass filter may suffice. Conversely, if an image contains a low amount of noise but with relatively high magnitude, then a median[non-linear] filter may be more appropriate.
 
+###Few augmentation techniques:###
+https://arxiv.org/pdf/1707.09725.pdf#page=94
+
 ###References###
 
 https://classes.soe.ucsc.edu/cmpe264/Fall06/lec4.pdf
