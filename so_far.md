@@ -29,6 +29,15 @@
 
 11. Speckle Noise
 
+12. Ringing artifacts/ Compression artifacts
+
+13. Screen door effect
+
+14. Screen tearing
+
+15. Color banding 
+  
+
 
 ## Common terms: ##
 
@@ -258,6 +267,10 @@ https://arxiv.org/pdf/1804.02603.pdf
 Exhaustive list of filters: https://www.cse.unr.edu/~fredh/papers/conf/034-asoidt/paper.pdf
 
 Digital Image Processing 2nd Edition by Gonzalez, Woods
+
+https://en.wikipedia.org/wiki/Ringing_artifacts#JPEG
+
+
 
 
 
